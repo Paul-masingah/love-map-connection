@@ -6,6 +6,11 @@ import { Heart, Calendar, Users, Clock, ArrowRight, Check } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import AIEnhancedHero from "@/components/AIEnhancedHero";
+import AIInsightsFeature from "@/components/AIInsightsFeature";
+import AIVideoShowcase from "@/components/AIVideoShowcase";
+import AIMatchExamples from "@/components/AIMatchExamples";
+import AIMatchPreview from "@/components/AIMatchPreview";
 
 const Landing = () => {
   return (
@@ -13,36 +18,11 @@ const Landing = () => {
       <Navbar />
       
       <main className="flex-1">
-        {/* Hero Section */}
-        <section className="py-20 md:py-28 bg-gradient-to-b from-white to-purple-50">
-          <div className="container">
-            <div className="max-w-3xl mx-auto text-center space-y-8">
-              <h1 className="text-4xl font-bold leading-tight md:text-6xl md:leading-tight">
-                Matching at your next 
-                <span className="block text-matchbox-purple">movie night, costume ball</span>
-              </h1>
-              <p className="text-xl text-gray-600">
-                Matchbox is the matching algorithm behind your next great event.
-              </p>
-              <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
-                <Button variant="outline" size="lg">
-                  Contact Sales
-                </Button>
-                <Button 
-                  size="lg" 
-                  className="bg-matchbox-purple hover:bg-matchbox-purple/90"
-                  asChild
-                >
-                  <Link to="/create">Get Started</Link>
-                </Button>
-              </div>
-              <p className="text-gray-500 text-sm pt-8">
-                Powered by the technology behind the Marriage Pact.
-                <span className="block">750,000 people matched to date.</span>
-              </p>
-            </div>
-          </div>
-        </section>
+        {/* AI Enhanced Hero Section */}
+        <AIEnhancedHero />
+        
+        {/* AI Insights Feature Section */}
+        <AIInsightsFeature />
         
         {/* How It Works Section */}
         <section className="py-20 bg-white">
@@ -153,6 +133,12 @@ const Landing = () => {
           </div>
         </section>
         
+        {/* AI Match Examples Section */}
+        <AIMatchExamples />
+        
+        {/* AI Video Showcase Section */}
+        <AIVideoShowcase />
+        
         {/* Premium Features */}
         <section className="py-20 bg-gray-50">
           <div className="container">
@@ -251,6 +237,29 @@ const Landing = () => {
                   <p className="text-sm text-gray-600">
                     The right to charge your guests for tickets to your Matchbox events.
                   </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        {/* AI Match Preview Section */}
+        <section className="py-16 bg-white">
+          <div className="container">
+            <div className="max-w-4xl mx-auto">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h2 className="text-3xl font-bold mb-4">Experience Our AI Matching</h2>
+                  <p className="text-gray-600 mb-6">
+                    Try a preview of our AI matching technology to see how it generates personalized insights for each match.
+                  </p>
+                  <p className="text-sm text-gray-500">
+                    Our AI analyzes responses to generate compatibility scores and personalized insights that help people connect more meaningfully.
+                  </p>
+                </div>
+                
+                <div>
+                  <AIMatchPreview matchType="romantic" />
                 </div>
               </div>
             </div>
