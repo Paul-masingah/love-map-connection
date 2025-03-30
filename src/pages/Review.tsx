@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -7,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useState } from "react";
 import { Check } from "lucide-react";
+import { Link, useNavigate } from "react-router-dom";
 
 const Review = () => {
   const [firstName, setFirstName] = useState("");
@@ -15,6 +15,7 @@ const Review = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [verificationCode, setVerificationCode] = useState("");
   const [isVerifying, setIsVerifying] = useState(false);
+  const navigate = useNavigate();
   
   const handleContinue = () => {
     if (!firstName || !lastName || !email || !phoneNumber) {
@@ -26,12 +27,7 @@ const Review = () => {
       return;
     }
     
-    // Simulate sending a verification code
-    setIsVerifying(true);
-    toast({
-      title: "Verification code sent",
-      description: "Check your phone for the verification code"
-    });
+    navigate("/checkout");
   };
   
   const handleVerify = () => {
@@ -44,16 +40,7 @@ const Review = () => {
       return;
     }
     
-    // Simulate successful verification
-    toast({
-      title: "Success!",
-      description: "Your event has been created! You'll receive an email with further instructions.",
-    });
-    
-    // Redirect to home or a success page
-    setTimeout(() => {
-      window.location.href = "/";
-    }, 2000);
+    navigate("/checkout");
   };
   
   return (
@@ -62,7 +49,7 @@ const Review = () => {
       
       <main className="flex-1 bg-gray-50 py-12">
         <div className="container max-w-4xl">
-          <div className="mb-8">
+          <div className="mb-8 animate-fade-in">
             <h1 className="text-3xl font-bold mb-2">Review</h1>
           </div>
           
@@ -87,16 +74,16 @@ const Review = () => {
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <div className="bg-white border rounded-lg p-6 mb-6">
-                <h2 className="text-xl font-bold mb-4">YOUR EVENT</h2>
+            <div className="space-y-6 animate-slide-in-up">
+              <div className="bg-white border rounded-lg p-6 mb-6 shadow-sm hover:shadow-md transition-shadow card-hover">
+                <h2 className="text-xl font-bold mb-4 text-gradient">YOUR EVENT</h2>
                 <div className="space-y-2">
                   <p className="font-semibold">match.box/playing</p>
                 </div>
               </div>
               
-              <div className="bg-white border rounded-lg p-6">
-                <h2 className="text-xl font-bold mb-4">SUMMARY</h2>
+              <div className="bg-white border rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow card-hover">
+                <h2 className="text-xl font-bold mb-4 text-gradient">SUMMARY</h2>
                 <div className="space-y-3">
                   <div className="flex items-center gap-2">
                     <Check className="h-5 w-5 text-matchbox-purple" />
@@ -127,9 +114,9 @@ const Review = () => {
               </div>
             </div>
             
-            <div>
+            <div className="animate-slide-in-right">
               {!isVerifying ? (
-                <div className="bg-white border rounded-lg p-6">
+                <div className="bg-white border rounded-lg p-6 shadow-md">
                   <div className="space-y-4">
                     <div className="grid grid-cols-2 gap-4">
                       <div className="space-y-2">
@@ -139,6 +126,7 @@ const Review = () => {
                           value={firstName}
                           onChange={(e) => setFirstName(e.target.value)}
                           required
+                          className="transition-all focus:ring-2 focus:ring-matchbox-purple/30"
                         />
                       </div>
                       
@@ -149,6 +137,7 @@ const Review = () => {
                           value={lastName}
                           onChange={(e) => setLastName(e.target.value)}
                           required
+                          className="transition-all focus:ring-2 focus:ring-matchbox-purple/30"
                         />
                       </div>
                     </div>
@@ -161,6 +150,7 @@ const Review = () => {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         required
+                        className="transition-all focus:ring-2 focus:ring-matchbox-purple/30"
                       />
                     </div>
                     
@@ -174,7 +164,7 @@ const Review = () => {
                           id="phoneNumber" 
                           value={phoneNumber}
                           onChange={(e) => setPhoneNumber(e.target.value)}
-                          className="rounded-l-none"
+                          className="rounded-l-none transition-all focus:ring-2 focus:ring-matchbox-purple/30"
                           required
                         />
                       </div>
@@ -182,9 +172,10 @@ const Review = () => {
                     
                     <Button 
                       onClick={handleContinue}
-                      className="w-full bg-matchbox-purple hover:bg-matchbox-purple/90"
+                      className="w-full bg-matchbox-purple hover:bg-matchbox-purple/90 transition-colors relative overflow-hidden group"
                     >
-                      CONTINUE
+                      <span className="relative z-10">PROCEED TO CHECKOUT</span>
+                      <span className="absolute inset-0 bg-gradient-to-r from-matchbox-purple to-matchbox-coral opacity-0 group-hover:opacity-100 transition-opacity"></span>
                     </Button>
                   </div>
                   

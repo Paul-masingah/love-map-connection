@@ -11,6 +11,7 @@ import Questions from "./pages/Questions";
 import Branding from "./pages/Branding";
 import Pricing from "./pages/Pricing";
 import Review from "./pages/Review";
+import Checkout from "./pages/Checkout";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/branding" element={<Branding />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/review" element={<Review />} />
+          <Route path="/checkout" element={<Checkout />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

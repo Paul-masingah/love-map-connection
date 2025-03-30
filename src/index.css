@@ -101,4 +101,113 @@
   .text-balance {
     text-wrap: balance;
   }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-matchbox-purple to-matchbox-coral bg-clip-text text-transparent;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  }
+  
+  .pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  .floating {
+    animation: floating 6s ease-in-out infinite;
+  }
+  
+  .glass-effect {
+    @apply backdrop-blur-md bg-white/80 dark:bg-black/30 border border-white/20 dark:border-white/10;
+  }
+  
+  .hero-gradient {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.15) 0%, rgba(248, 113, 113, 0.15) 100%);
+  }
+  
+  .pricing-highlight {
+    @apply relative overflow-hidden before:absolute before:inset-0 before:-z-10 before:bg-gradient-to-r before:from-matchbox-purple/20 before:to-matchbox-coral/20 before:opacity-0 hover:before:opacity-100 before:transition-opacity;
+  }
+}
+
+@keyframes floating {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.slide-in-right {
+  animation: slideInRight 0.5s ease-out forwards;
+}
+
+.slide-in-up {
+  animation: slideInUp 0.5s ease-out forwards;
+}
+
+.scale-in {
+  animation: scaleIn 0.3s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.checkout-bg {
+  background-image: radial-gradient(circle at top right, rgba(139, 92, 246, 0.1), transparent 400px),
+                     radial-gradient(circle at bottom left, rgba(248, 113, 113, 0.1), transparent 400px);
 }
