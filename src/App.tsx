@@ -5,7 +5,6 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { SignedIn, SignedOut, RedirectToSignIn } from "@clerk/clerk-react";
 import Landing from "./pages/Landing";
 import NotFound from "./pages/NotFound";
 import CreateEvent from "./pages/CreateEvent";
@@ -35,65 +34,13 @@ const App = () => {
               <Route path="/sign-in" element={<SignIn />} />
               <Route path="/sign-up" element={<SignUp />} />
               <Route path="/pricing" element={<Pricing />} />
-              
-              {/* Protected Routes */}
-              <Route 
-                path="/create" 
-                element={
-                  <SignedIn>
-                    <CreateEvent />
-                  </SignedIn>
-                } 
-              />
-              <Route 
-                path="/questions" 
-                element={
-                  <SignedIn>
-                    <Questions />
-                  </SignedIn>
-                } 
-              />
-              <Route 
-                path="/branding" 
-                element={
-                  <SignedIn>
-                    <Branding />
-                  </SignedIn>
-                } 
-              />
-              <Route 
-                path="/review" 
-                element={
-                  <SignedIn>
-                    <Review />
-                  </SignedIn>
-                } 
-              />
-              <Route 
-                path="/checkout" 
-                element={
-                  <SignedIn>
-                    <Checkout />
-                  </SignedIn>
-                } 
-              />
-              <Route 
-                path="/profile" 
-                element={
-                  <SignedIn>
-                    <Profile />
-                  </SignedIn>
-                } 
-              />
-              <Route 
-                path="/dashboard" 
-                element={
-                  <SignedIn>
-                    <Dashboard />
-                  </SignedIn>
-                } 
-              />
-              
+              <Route path="/create" element={<CreateEvent />} />
+              <Route path="/questions" element={<Questions />} />
+              <Route path="/branding" element={<Branding />} />
+              <Route path="/review" element={<Review />} />
+              <Route path="/checkout" element={<Checkout />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/dashboard" element={<Dashboard />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>
