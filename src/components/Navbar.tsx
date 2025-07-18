@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/clerk-react";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,12 +28,28 @@ const Navbar = () => {
         </nav>
         
         <div className="hidden md:flex items-center space-x-4">
-          <Button variant="outline" size="sm">
-            Contact Sales
-          </Button>
-          <Button size="sm" className="bg-matchbox-purple hover:bg-matchbox-purple/90">
-            Get Started
-          </Button>
+          <SignedOut>
+            <Button variant="outline" size="sm">
+              Contact Sales
+            </Button>
+            <SignInButton mode="modal">
+              <Button size="sm" className="bg-matchbox-purple hover:bg-matchbox-purple/90">
+                Get Started
+              </Button>
+            </SignInButton>
+          </SignedOut>
+          <SignedIn>
+            <Button variant="outline" size="sm" asChild>
+              <Link to="/dashboard">Dashboard</Link>
+            </Button>
+            <UserButton 
+              appearance={{
+                elements: {
+                  avatarBox: "h-8 w-8"
+                }
+              }}
+            />
+          </SignedIn>
         </div>
         
         <button
@@ -73,12 +90,21 @@ const Navbar = () => {
             </Link>
           </nav>
           <div className="flex flex-col space-y-2">
-            <Button variant="outline" size="sm">
-              Contact Sales
-            </Button>
-            <Button size="sm" className="bg-matchbox-purple hover:bg-matchbox-purple/90">
-              Get Started
-            </Button>
+            <SignedOut>
+              <Button variant="outline" size="sm">
+                Contact Sales
+              </Button>
+              <SignInButton mode="modal">
+                <Button size="sm" className="bg-matchbox-purple hover:bg-matchbox-purple/90">
+                  Get Started
+                </Button>
+              </SignInButton>
+            </SignedOut>
+            <SignedIn>
+              <Button variant="outline" size="sm" asChild>
+                <Link to="/dashboard">Dashboard</Link>
+              </Button>
+            </SignedIn>
           </div>
         </div>
       )}
