@@ -1,6 +1,15 @@
 
 import { Link } from "react-router-dom";
 
+/**
+ * The footer component for the application.
+ *
+ * This component displays the footer section, which includes links to
+ * social media, key resources (such as hosting an event and pricing),
+ * and the copyright notice.
+ *
+ * @returns {JSX.Element} The rendered footer component.
+ */
 const Footer = () => {
   return (
     <footer className="bg-gray-50 border-t">

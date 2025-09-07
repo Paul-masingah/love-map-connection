@@ -4,6 +4,15 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Link } from "react-router-dom";
 
+/**
+ * The sign-in page for user authentication.
+ *
+ * This component provides a form for users to sign in to their account
+ * using their email and password. It includes a link to the sign-up page
+ * for new users.
+ *
+ * @returns {JSX.Element} The rendered Sign-In page.
+ */
 const SignInPage = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-background">

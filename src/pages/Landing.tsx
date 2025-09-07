@@ -12,6 +12,16 @@ import AIVideoShowcase from "@/components/AIVideoShowcase";
 import AIMatchExamples from "@/components/AIMatchExamples";
 import AIMatchPreview from "@/components/AIMatchPreview";
 
+/**
+ * The main landing page of the application.
+ *
+ * This component serves as the entry point for users and showcases the
+ * key features of the Matchbox platform. It includes sections for
+ * an AI-enhanced hero, feature descriptions, how-it-works, pricing,
+ * and an FAQ.
+ *
+ * @returns {JSX.Element} The rendered Landing page.
+ */
 const Landing = () => {
   return (
     <div className="flex flex-col min-h-screen">

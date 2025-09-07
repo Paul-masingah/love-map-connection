@@ -4,6 +4,15 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Link } from "react-router-dom";
 
+/**
+ * The sign-up page for new user registration.
+ *
+ * This component provides a form for new users to create an account by
+ * providing their first name, last name, email, and a password. It
+ * includes a link to the sign-in page for existing users.
+ *
+ * @returns {JSX.Element} The rendered Sign-Up page.
+ */
 const SignUpPage = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-background">

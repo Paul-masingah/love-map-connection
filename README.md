@@ -1,69 +1,129 @@
-# Welcome to your Lovable project
+# Vite React Shadcn TypeScript Starter
 
-## Project info
+This is a starter template for building modern web applications using Vite, React, TypeScript, and Shadcn/UI. It provides a solid foundation with a pre-configured project structure, essential tools, and a set of example components and pages.
 
-**URL**: https://lovable.dev/projects/ff586c6c-a34f-446e-b827-bc4239bfea0b
+## Live Demo
 
-## How can I edit this code?
+[Link to your live demo]()
 
-There are several ways of editing your application.
+## Features
 
-**Use Lovable**
+- **Fast Development Experience:** Built with Vite for near-instant server start and hot module replacement (HMR).
+- **Type Safety:** Written in TypeScript to catch errors early and improve code quality.
+- **Component-Based Architecture:** Organized with React components for modular and reusable UI.
+- **Beautifully Designed UI:** Includes a set of accessible and customizable components from Shadcn/UI.
+- **Routing:** Pre-configured with React Router for easy navigation between pages.
+- **State Management:** Uses TanStack Query for efficient data fetching and caching.
+- **Authentication:** Example pages for sign-in and sign-up using Clerk.
+- **AI-Powered Features:** Includes components that leverage AI for enhanced user experiences.
+- **Responsive Design:** Styled with Tailwind CSS for a mobile-first and responsive layout.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/ff586c6c-a34f-446e-b827-bc4239bfea0b) and start prompting.
+## Getting Started
 
-Changes made via Lovable will be committed automatically to this repo.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-**Use your preferred IDE**
+### Prerequisites
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- [Node.js](https://nodejs.org/en/) (v18 or later)
+- [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Installation
 
-Follow these steps:
+1.  **Clone the repository:**
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+    ```bash
+    git clone https://github.com/your-username/your-repo-name.git
+    ```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+2.  **Navigate to the project directory:**
 
-# Step 3: Install the necessary dependencies.
-npm i
+    ```bash
+    cd your-repo-name
+    ```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+3.  **Install the dependencies:**
+
+    ```bash
+    npm install
+    ```
+
+4.  **Start the development server:**
+
+    ```bash
+    npm run dev
+    ```
+
+    Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+
+## Available Scripts
+
+In the project directory, you can run:
+
+-   `npm run dev`: Runs the app in development mode.
+-   `npm run build`: Builds the app for production to the `dist` folder.
+-   `npm run lint`: Lints the code using ESLint.
+-   `npm run preview`: Serves the production build locally for preview.
+
+## Folder Structure
+
+```
+.
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── ui/
+│   │   ├── checkout/
+│   │   ├── AIEnhancedHero.tsx
+│   │   └── ...
+│   ├── hooks/
+│   ├── lib/
+│   ├── pages/
+│   │   ├── Landing.tsx
+│   │   └── ...
+│   ├── services/
+│   ├── App.tsx
+│   ├── main.tsx
+│   └── ...
+├── .gitignore
+├── package.json
+└── ...
 ```
 
-**Edit a file directly in GitHub**
+-   **`public/`**: Contains static assets like images and fonts.
+-   **`src/`**: The main source code of the application.
+-   **`src/components/`**: Reusable React components.
+    -   `src/components/ui/`: Components from Shadcn/UI.
+    -   `src/components/checkout/`: Components related to the checkout process.
+-   **`src/hooks/`**: Custom React hooks.
+-   **`src/lib/`**: Utility functions and libraries.
+-   **`src/pages/`**: Top-level page components.
+-   **`src/services/`**: Services for interacting with APIs.
+-   **`src/App.tsx`**: The root component of the application, where routing is defined.
+-   **`src/main.tsx`**: The entry point of the application.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Technologies Used
 
-**Use GitHub Codespaces**
+-   [Vite](https://vitejs.dev/) - Next-generation front-end tooling.
+-   [React](https://reactjs.org/) - A JavaScript library for building user interfaces.
+-   [TypeScript](https://www.typescriptlang.org/) - A typed superset of JavaScript.
+-   [Shadcn/UI](https://ui.shadcn.com/) - Re-usable components built using Radix UI and Tailwind CSS.
+-   [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework.
+-   [React Router](https://reactrouter.com/) - Declarative routing for React.
+-   [TanStack Query](https://tanstack.com/query/v5) - Powerful asynchronous state management.
+-   [Clerk](https://clerk.com/) - User management and authentication.
+-   [Framer Motion](https://www.framer.com/motion/) - A production-ready motion library for React.
+-   [Zod](https://zod.dev/) - TypeScript-first schema validation.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Contributing
 
-## What technologies are used for this project?
+Contributions are welcome! Please feel free to submit a pull request.
 
-This project is built with .
+1.  Fork the Project
+2.  Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3.  Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4.  Push to the Branch (`git push origin feature/AmazingFeature`)
+5.  Open a Pull Request
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## License
 
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/ff586c6c-a34f-446e-b827-bc4239bfea0b) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

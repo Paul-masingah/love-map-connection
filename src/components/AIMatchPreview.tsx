@@ -10,6 +10,18 @@ interface AIMatchPreviewProps {
   matchType: string;
 }
 
+/**
+ * An interactive preview of the AI matching technology.
+ *
+ * This component allows users to generate a sample match and see the
+ * AI-generated insights. It includes a loading state to simulate AI
+ * processing and can be configured for different match types (e.g.,
+ * romantic or friendship).
+ *
+ * @param {AIMatchPreviewProps} props - The component props.
+ * @param {string} props.matchType - The type of match to preview.
+ * @returns {JSX.Element} The rendered AI match preview component.
+ */
 const AIMatchPreview = ({ matchType }: AIMatchPreviewProps) => {
   const [loading, setLoading] = useState(false);
   const [insights, setInsights] = useState<string[]>([]);

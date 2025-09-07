@@ -10,6 +10,16 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
+/**
+ * A component that displays examples of AI-generated matches.
+ *
+ * This component showcases a carousel of AI match examples, each
+ * displaying two matched individuals, their compatibility score, and the
+ * key insights that contributed to the match. It serves as a visual
+ * demonstration of the platform's AI matchmaking capabilities.
+ *
+ * @returns {JSX.Element} The rendered AI match examples component.
+ */
 const AIMatchExamples = () => {
   const matchExamples = [
     {

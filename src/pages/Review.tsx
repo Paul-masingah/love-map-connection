@@ -8,6 +8,17 @@ import { useState } from "react";
 import { Check } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 
+/**
+ * The review page for creating an event.
+ *
+ * This component displays a summary of the event details, including the
+ * event link, number of questions, and participant capacity. It also
+ * includes a form for the user to enter their personal information and
+ * a total cost summary before proceeding to checkout. A phone
+ * verification step is included for security.
+ *
+ * @returns {JSX.Element} The rendered Review page.
+ */
 const Review = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");

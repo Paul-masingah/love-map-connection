@@ -10,6 +10,16 @@ import Footer from "@/components/Footer";
 import { useState } from "react";
 import { Check } from "lucide-react";
 
+/**
+ * The pricing page for creating an event.
+ *
+ * This component allows users to configure their event's pricing by
+ * selecting the number of guests, choosing whether to charge for tickets,
+ * and selecting a pricing tier (Basic, Premium, or Elite). The total
+ * price is dynamically calculated and displayed based on these selections.
+ *
+ * @returns {JSX.Element} The rendered Pricing page.
+ */
 const Pricing = () => {
   const [guestCount, setGuestCount] = useState<number>(30);
   const [ticketing, setTicketing] = useState<string>("no");
