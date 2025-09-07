@@ -1,11 +1,11 @@
-import { useUser } from "@clerk/clerk-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Calendar, Users, Settings } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Dashboard = () => {
-  const { user } = useUser();
+  // Temporary fallback user data until authentication is properly configured
+  const user = { firstName: 'Tech Enthusiast' };
 
   return (
     <div className="min-h-screen bg-background">
