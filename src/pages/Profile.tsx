@@ -4,6 +4,15 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
 
+/**
+ * The user profile page.
+ *
+ * This component provides a user interface for managing profile settings.
+ * It includes sections for updating personal information (name, email) and
+ * for changing the account password.
+ *
+ * @returns {JSX.Element} The rendered Profile page.
+ */
 const ProfilePage = () => {
   return (
     <div className="min-h-screen bg-background py-12">

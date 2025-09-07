@@ -4,6 +4,16 @@ import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
+/**
+ * The navigation bar component for the application.
+ *
+ * This component displays the main navigation bar, which is responsive
+ * and includes links to the main pages, as well as buttons for
+ * contacting sales, getting started, and accessing the dashboard. It
+ * features a mobile menu that toggles open and closed.
+ *
+ * @returns {JSX.Element} The rendered navigation bar component.
+ */
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 

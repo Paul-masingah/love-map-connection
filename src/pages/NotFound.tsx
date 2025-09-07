@@ -6,6 +6,17 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
+/**
+ * A 404 Not Found page.
+ *
+ * This component is displayed when a user tries to access a route that
+ * does not exist. It provides a clear message to the user and a link
+ to
+ * return to the homepage. It also logs the path of the non-existent
+ * route to the console for debugging purposes.
+ *
+ * @returns {JSX.Element} The rendered 404 Not Found page.
+ */
 const NotFound = () => {
   const location = useLocation();
 

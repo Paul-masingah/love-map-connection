@@ -3,6 +3,16 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
+/**
+ * An AI-enhanced hero section with a background video.
+ *
+ * This component serves as the primary hero section for the landing page.
+ * It features a background video, a prominent headline, calls to action,
+ * and key statistics to engage users and encourage them to explore the
+ * platform.
+ *
+ * @returns {JSX.Element} The rendered AI-enhanced hero section.
+ */
 const AIEnhancedHero = () => {
   return (
     <section className="relative bg-white overflow-hidden">

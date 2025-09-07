@@ -14,6 +14,19 @@ interface OrderSummaryProps {
   total: number;
 }
 
+/**
+ * A component that displays a summary of the items in an order.
+ *
+ * This component takes an array of order items and a total price, and
+ * displays them in a clear and organized format. It also includes a list
+ * of key features included with the purchase and a satisfaction
+ * guarantee.
+ *
+ * @param {OrderSummaryProps} props - The component props.
+ * @param {OrderItem[]} props.items - The items in the order.
+ * @param {number} props.total - The total price of the order.
+ * @returns {JSX.Element} The rendered order summary component.
+ */
 const OrderSummary = ({ items, total }: OrderSummaryProps) => {
   return (
     <Card className="sticky top-6 shadow-md border-matchbox-purple/20">

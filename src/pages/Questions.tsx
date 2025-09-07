@@ -7,6 +7,17 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useState } from "react";
 
+/**
+ * A page for selecting questions for an event questionnaire.
+ *
+ * This component allows event organizers to build a questionnaire by
+ * selecting from a list of available questions categorized into tabs
+ * (Suggested, Popular, Important, Spicy, Professional). Selected questions
+ * are displayed in a separate panel, and the user can add or remove
+ * questions as needed.
+ *
+ * @returns {JSX.Element} The rendered Questions page.
+ */
 // Sample questions for the different categories
 const sampleQuestions = {
   suggested: [

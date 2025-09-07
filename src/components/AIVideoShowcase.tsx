@@ -6,6 +6,17 @@ import { Slider } from "@/components/ui/slider";
 import { motion } from 'framer-motion';
 import { PlayCircle, PauseCircle, SkipBack, SkipForward, VolumeX, Volume2 } from 'lucide-react';
 
+/**
+ * A component that showcases the AI technology through a video and
+ * interactive visualizations.
+ *
+ * This component features an embedded YouTube video with custom playback
+ * controls and an accompanying animated visualization that changes based
+ * on the selected tab. It provides a dynamic and engaging experience to
+ * demonstrate the platform's AI capabilities.
+ *
+ * @returns {JSX.Element} The rendered AI video showcase component.
+ */
 const AIVideoShowcase = () => {
   // State for video controls
   const [isPlaying, setIsPlaying] = useState(false);

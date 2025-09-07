@@ -11,6 +11,16 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+/**
+ * A feature section highlighting the AI-powered insights.
+ *
+ * This component showcases the key AI-driven features of the platform,
+ * including compatibility analysis, personality mapping, and personalized
+ * conversation starters. It is designed to build trust and demonstrate
+ * the value of the AI matchmaking technology.
+ *
+ * @returns {JSX.Element} The rendered AI insights feature section.
+ */
 const AIInsightsFeature = () => {
   return (
     <section className="py-24 bg-white relative overflow-hidden">

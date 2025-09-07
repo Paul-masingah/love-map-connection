@@ -8,6 +8,19 @@ interface PaymentMethodSelectorProps {
   onSelectMethod: (method: string) => void;
 }
 
+/**
+ * A component for selecting a payment method.
+ *
+ * This component provides a set of options for users to select their
+ * preferred payment method, such as credit/debit card or PayPal. It
+ * manages the selection state through props.
+ *
+ * @param {PaymentMethodSelectorProps} props - The component props.
+ * @param {string} props.selectedMethod - The currently selected method.
+ * @param {(method: string) => void} props.onSelectMethod - The callback
+ *   to be called when a new method is selected.
+ * @returns {JSX.Element} The rendered payment method selector component.
+ */
 const PaymentMethodSelector = ({ 
   selectedMethod, 
   onSelectMethod 
